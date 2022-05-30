@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Cera Pro",
+    fontFamily: "Cera Pro, sans-serif",
     h1: {
       fontWeight: "bold",
       fontSize: "36px",
