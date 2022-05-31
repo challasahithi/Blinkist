@@ -5,11 +5,13 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EntrepreneurPage from "./Pages/Entrepreneur";
 import Login from "./components/LoginButton";
+import Logout from "./components/LogoutButton";
 
 function App() {
   return (
     <Router>
-      <Login/>     
+      <Login/>   
+      <Logout/>  
       <Routes>
         <Route path="/" element={<MyLibrary />}/>
         <Route path="/book-details" element={<BookDetail />}/>
