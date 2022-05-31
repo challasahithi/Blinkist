@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/organisms/BookDescription/BookDescription.stories.tsx</title>
+    <title>Code coverage report for src/components/molecules/Buttons/Buttons.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/organisms/BookDescription</a> BookDescription.stories.tsx</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/molecules/Buttons</a> Buttons.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -120,25 +120,11 @@
 <a name='L55'></a><a href='#L55'>55</a>
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L58'></a><a href='#L58'>58</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,6 +158,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -187,80 +176,64 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { createTheme, ThemeProvider } from "@mui/material";
-import BookView from "./BookDescription";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import Button from "@mui/material/Button";
+import { makeStyles } from "@mui/styles";
 &nbsp;
-export default {
-  title: "Book View",
-  component: BookView,
-} as ComponentMeta&lt;typeof BookView&gt;;
-&nbsp;
-const theme = <span class="cstat-no" title="statement not covered" >createTheme({</span>
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        body2: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "400",
-          fontSize: "16px",
-          lineHeight: "20px",
-          color: "#03314B",
-        },
-        h1: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "700",
-          fontSize: "36px",
-          lineHeight: "45px",
-          color: "#03314B",
-        },
-        subtitle1: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "400",
-          fontSize: "20px",
-          lineHeight: "25px",
-          color: "#03314B",
-        },
-        body1: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "400",
-          fontSize: "16px",
-          lineHeight: "20px",
-          color: "#6D787E",
-        },
-        caption: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "400",
-          fontSize: "14px",
-          lineHeight: "18px",
-          color: "#6D787E",
-        },
-      },
+const useStyles = makeStyles({
+  connectButton: {
+    width: "296px",
+    height: "44px",
+    backgroundColor: "rgba(44, 224, 128, 1)",
+    borderRadius: 0,
+    border: "none",
+    "&amp;:hover": {
+      backgroundColor: "rgba(0, 194, 99, 1)",
     },
   },
 });
 &nbsp;
-const Template: ComponentStory&lt;typeof BookView&gt; = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >  &lt;ThemeProvider theme={theme}&gt;</span>
-    &lt;BookView /&gt;
-  &lt;/ThemeProvider&gt;
-);
+interface Props {
+  color?:
+    | "inherit"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "info"
+    | "warning";
+  disabled?: boolean;
+  href?: string;
+  size?: "small" | "medium" | "large";
+  variant?: "contained" | "outlined" | "text";
+  className?: string;
+  style?: React.CSSProperties;
+  children: React.ReactNode;
+  onMouseEnter?: () =&gt; void;
+  onMouseLeave?: () =&gt; void;
+  onClick?: () =&gt; void;
+}
 &nbsp;
-export const BookViewStory = <span class="cstat-no" title="statement not covered" >Template.bind({});</span>
-<span class="cstat-no" title="statement not covered" >BookViewStory.args = {};</span>
+const Buttons = (props: Props) =&gt; {
+  const classes = useStyles();
+  return (
+    &lt;Button
+      variant={props.variant}
+      color={props.color}
+      disabled={props.disabled}
+      size={props.size}
+      className={classes.connectButton}
+      href={props.href}
+      style={props.style}
+      onClick={props.onClick}
+    &gt;
+      {props.children}
+    &lt;/Button&gt;
+  );
+};
+&nbsp;
+export default Buttons;
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
